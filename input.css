@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+    body {
+        background: radial-gradient(99.73% 110.23% at 1.25% 1.14%, #C4E4F7 0%, #97CAF9 35.5%, #9080FC 65%, #FFDAB9 100%);
+        overflow-x: hidden;
+    }
