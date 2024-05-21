@@ -354,6 +354,209 @@
 
 
 
+<style>
+  .custom-switch-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 420px;
+    height: 80px;
+    background-color: #9080FC;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .switch-toggle {
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 5px;
+    width: 205px;
+    background-color: white;
+    border-radius: 50px;
+    transition: transform 0.3s;
+  }
+  .custom-switch {
+    flex: 1;
+    text-align: center;
+    z-index: 1;
+    transition: color 0.3s;
+  }
+  .custom-switch.active {
+    color: #9080FC;
+  }
+  .custom-switch.inactive {
+    color: #FFDAB9;
+  }
+  .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #9080FC;
+    border-radius: 32px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  .btn-custom {
+    background-color: #FFDAB9;
+    border: none;
+    color: black;
+  }
+  .btn-custom:hover {
+    background-color: #7a6ded;
+  }
+</style>
+
+<section class="py-24 overflow-hidden bg-white/75">
+  <div class="container px-24 mx-auto font-epilogue">
+    <div class="mb-20 md:max-w-2xl text-center mx-auto">
+      <span class="inline-block mb-4 text-sm text-black-400 font-medium tracking-tighter">Onze prijsopties, voor ieder wat wils</span>
+      <h2 class="mb-8 text-7xl lg:text-8xl text-black tracking-7xl lg:tracking-8xl">Vergelijk onze abonnementen</h2>
+      <div class="relative p-1 max-w-max mx-auto bg-gradient-radial-dark-light rounded-full">
+        <div class="custom-switch-wrapper" onclick="toggleBilling()">
+          <div id="switch-toggle" class="switch-toggle"></div>
+          <div id="monthly-billing" class="custom-switch active">Maandelijks</div>
+          <div id="annual-billing" class="custom-switch inactive">Jaarlijks <span class="px-3 py-1.5 text-sm font-medium text-center text-green-400 uppercase border border-green-400 rounded-full">Bespaar 20%</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-2">
+      <div class="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+        <div class="card relative px-8 pt-12 pb-12 h-full overflow-hidden">
+          <div>
+            <p class="mb-2 text-lg text-white font-semibold">Gratis Abonnement</p>
+            <p class="mb-6 text-gray-200">Werkgevers kunnen één vacature plaatsen met beperkte info, zonder videopresentatie. Zoeken naar studenten en gebruik van de sollicitatie-assistent zijn niet beschikbaar.</p>
+            <p class="mb-4 text-white font-medium text-5xl">
+              <span>€0</span>
+            </p>
+            <p class="mb-6 text-xs text-gray-300 font-bold uppercase">Wat is inbegrepen</p>
+            <ul class="mb-10">
+              <li class="flex items-center mb-4">
+                <div class="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
+                  <img src="Group 12786.svg" alt="">
+                </div>
+                <p class="text-white">Plaats één vacature</p>
+              </li>
+            </ul>
+          </div>
+          <a class="relative z-10 block px-14 py-4 text-center font-medium tracking-2xl btn-custom rounded-full transition duration-300" href="#">Start nu</a>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
+        <div class="card relative px-8 pt-12 pb-12 h-full overflow-hidden">
+          <div>
+            <p class="mb-2 text-lg text-white font-semibold">Basis Abonnement</p>
+            <p class="mb-6 text-gray-200">Werkgevers kunnen tot vijf vacatures plaatsen en hebben toegang tot een uitgebreider bedrijfsprofiel, zonder videopresentatie of kleuraanpassingen.</p>
+            <p class="mb-4 text-white font-medium text-5xl">
+              <span id="basic-price">€175</span>
+              <span id="basic-interval" class="text-base font-medium text-gray-300">/ maand</span>
+            </p>
+            <p class="mb-6 text-xs text-gray-300 font-bold uppercase">Wat is inbegrepen</p>
+            <ul class="mb-10">
+              <li class="flex items-center mb-4">
+                <div class="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
+                  <img src="Group 12786.svg" alt="">
+                </div>
+                <p class="text-white">Tot 5 vacatures plaatsen</p>
+              </li>
+              <li class="flex items-center mb-4">
+                <div class="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
+                  <img src="Group 12786.svg" alt="">
+                </div>
+                <p class="text-white">Uitgebreider bedrijfsprofiel</p>
+              </li>
+              <li class="flex items-center">
+                <div class="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
+                  <img src="Group 12786.svg" alt="">
+                </div>
+                <p class="text-white">10 credits bij jaarlijks abonnement</p>
+              </li>
+            </ul>
+          </div>
+          <a class="relative z-10 block px-14 py-4 text-center font-medium tracking-2xl btn-custom rounded-full transition duration-300" href="#">Start nu</a>
+        </div>
+      </div>
+      <div class="w-full lg:w-1/3 px-2 mb-4">
+        <div class="card relative px-8 pt-12 pb-12 h-full overflow-hidden">
+          <div>
+            <p class="mb-2 text-lg text-white font-semibold">Premium Abonnement</p>
+            <p class="mb-6 text-gray-200">Toegang tot alle functionaliteiten, inclusief onbeperkt vacatures plaatsen, videopresentaties en maandelijkse webinars over stage en studentgerelateerde onderwerpen.</p>
+            <p class="mb-4 text-white font-medium text-5xl">
+              <span id="premium-price">€249</span>
+              <span id="premium-interval" class="text-base font-medium text-gray-300">/ maand</span>
+            </p>
+            <p class="mb-6 text-xs text-gray-300 font-bold uppercase">Wat is inbegrepen</p>
+            <ul class="mb-10">
+              <li class="flex items-center mb-4">
+                <div class="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
+                  <img src="Group 12786.svg" alt="">
+                </div>
+                <p class="text-white">Onbeperkt vacatures plaatsen</p>
+              </li>
+              <li class="flex items-center mb-4">
+                <div class="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
+                  <img src="Group 12786.svg" alt="">
+                </div>
+                <p class="text-white">Uitgebreider bedrijfsprofiel met videopresentaties</p>
+              </li>
+              <li class="flex items-center mb-4">
+                <div class="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
+                  <img src="Group 12786.svg" alt="">
+                </div>
+                <p class="text-white">Maandelijkse webinars</p>
+              </li>
+              <li class="flex items-center">
+                <div class="flex items-center justify-center w-5 h-5 mr-4 border border-green-400 rounded-full">
+                  <img src="Group 12786.svg" alt="">
+                </div>
+                <p class="text-white">25 credits bij jaarlijks abonnement</p>
+              </li>
+            </ul>
+          </div>
+          <a class="relative z-10 block px-14 py-4 text-center font-medium tracking-2xl btn-custom rounded-full transition duration-300" href="#">Start nu</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleBilling() {
+    const switchToggle = document.getElementById('switch-toggle');
+    const monthlyBilling = document.getElementById('monthly-billing');
+    const annualBilling = document.getElementById('annual-billing');
+    const basicPrice = document.getElementById('basic-price');
+    const premiumPrice = document.getElementById('premium-price');
+    const basicInterval = document.getElementById('basic-interval');
+    const premiumInterval = document.getElementById('premium-interval');
+
+    if (monthlyBilling.classList.contains('active')) {
+      switchToggle.style.transform = 'translateX(100%)';
+      monthlyBilling.classList.remove('active');
+      monthlyBilling.classList.add('inactive');
+      annualBilling.classList.remove('inactive');
+      annualBilling.classList.add('active');
+      basicPrice.textContent = '€1890';
+      premiumPrice.textContent = '€2689.20';
+      basicInterval.textContent = '/ jaar';
+      premiumInterval.textContent = '/ jaar';
+    } else {
+      switchToggle.style.transform = 'translateX(0%)';
+      monthlyBilling.classList.remove('inactive');
+      monthlyBilling.classList.add('active');
+      annualBilling.classList.remove('active');
+      annualBilling.classList.add('inactive');
+      basicPrice.textContent = '€175';
+      premiumPrice.textContent = '€249';
+      basicInterval.textContent = '/ maand';
+      premiumInterval.textContent = '/ maand';
+    }
+  }
+</script>
 
 
 
