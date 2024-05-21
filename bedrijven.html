@@ -1,163 +1,553 @@
+
+
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="nl-Be">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    
+        <title>Hirehero - Verbindt Studenten en Werkgevers in Vlaanderen</title>
+
+        <meta name="keywords" content="stages, studenten, werkgevers, vacaturematching, carrièremogelijkheden, hirehero, Vlaanderen, België, digitale cupido, tinder, stagematchingplatform">
+        <meta name="author" content="Jaro Brichau, Jeffrey Talemans">
+        <meta name="title" content="Hirehero - Verbindt studenten en werkgevers in Vlaanderen">
+        <meta name="description" content="Hirehero is het ultieme stageplatform dat studenten in Vlaanderen verbindt met werkgevers voor betekenisvolle stagekansen. Ontgrendel je potentieel met ons.">        
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="nl">
+        <meta name="distribution" content="local">
+        <link rel="canonical" href="hirehero.eu" />
+        <link rel="shortlink" href="hirehero.eu" />
+        <link rel="shortcut icon" type="image/x-icon" href="img/logoHirehero.svg" />
+
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&display=swap">
         <link rel="stylesheet" href="./css/main.css">
+        
         <title>Hirehero</title>
+
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
     </head>
 <body>
     <!--Navbar-->
+    <!-- Navbar Section -->
+    <section>
+      <div class="h-auto w-screen bg-[#C4E4F7] text-black fixed z-50">
+          <!-- NAVBAR -->
+          <nav class="font-epilogue mx-auto h-auto w-full max-w-[1600px] lg:relative lg:top-0">
+              <!-- CONTAINER -->
+              <div class="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4 xl:px-20">
+                  <!-- SVG LOGO -->
+                  <a href="index.html">
+                      <img src="img/logoHirehero.svg" alt="Logo Hirehero" class="inline-block h-10" />
+                  </a>
+                  
+                  <!-- MENU CONTENT 1 -->
+                  <div class="mt-14 flex flex-col space-y-8 lg:mt-0 lg:flex lg:flex-row lg:space-x-1 lg:space-y-0 hidden" id="menuContent">
+                      <a href="index.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Home</a>
+                      <a href="studenten.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Studenten</a>
+                      <a href="bedrijven.html" class="font-epilogue nav-link active-link rounded-lg lg:px-6 lg:py-4">Bedrijven</a>
+                      <a href="blog.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Blog</a>
+                      <a href="overOns.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Over ons</a>
+                      <a href="pricing.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Pricing</a>
+                  </div>
+                  <!-- MENU CONTENT 2 -->
+                  <div class="flex flex-col space-y-8 lg:flex lg:flex-row lg:space-x-3 lg:space-y-0 hidden" id="menuContent2">
+                      <a href="aanmelden.html" target="_blank" style="background-color: #FFDAB9;" class="inline-block rounded-full px-5 py-3 text-center font-bold text-black transition hover:border-black hover:bg-[#9080FC]">Aanmelden</a>
+                      <a href="registreren.html" target="_blank" style="background-color: #FFDAB9;" class="inline-block rounded-full px-5 py-3 text-center font-bold text-black transition hover:border-black hover:bg-[#9080FC]">Registreren</a>
+                  </div>
+                  <!-- BURGER MENU -->
+                  <!-- BURGER MENU -->
+<a href="#" class="absolute right-5 lg:hidden p-2" onclick="toggleMenu(event)">
+  <svg width="2rem" height="2rem" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 7H1C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9H19C19.5523 9 20 8.55228 20 8C20 7.44772 19.5523 7 19 7Z" fill="currentColor"></path>
+      <path d="M19 0H7C6.44772 0 6 0.447715 6 1C6 1.55228 6.44772 2 7 2H19C19.5523 2 20 1.55228 20 1C20 0.447715 19.5523 0 19 0Z" fill="currentColor"></path>
+      <path d="M19 14H11C10.4477 14 10 14.4477 10 15C10 15.5523 10.4477 16 11 16H19C19.5523 16 20 15.5523 20 15C20 14.4477 19.5523 14 19 14Z" fill="currentColor"></path>
+  </svg>
+</a>
+
+              </div>
+          </nav>
+      </div>
+  </section>
+  
+  <style>
+  .nav-link {
+      position: relative;
+      padding-bottom: 5px;
+      color: black;
+      transition: color 0.25s ease-out;
+  }
+  
+  .nav-link:hover {
+      color: #9080FC;
+  }
+  
+  .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #9080FC;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+  }
+  
+  .nav-link:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+  }
+  
+  .active-link {
+      color: #9080FC;
+  }
+  
+  .active-link::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #9080FC;
+      transform: scaleX(1);
+      transform-origin: bottom left;
+  }
+  </style>
+  
+  <script>
+  function toggleMenu(event) {
+      event.preventDefault();
+      const menuContent = document.getElementById('menuContent');
+      const menuContent2 = document.getElementById('menuContent2');
+      menuContent.classList.toggle('hidden');
+      menuContent2.classList.toggle('hidden');
+  }
+  </script>
+  
     
-    <nav class="bg-lightBlue fixed w-full z-20 top-0 start-0 border-b">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="index.html" class="flex items-center space-x-12 rtl:space-x-reverse">
-            <img src="./img/logoHirehero.svg" class="h-8" alt="Hirehero Logo">
-            <span class="self-center text-2xl font-epilogue font-bold whitespace-nowrap ">Hirehero</span>
-        </a>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            
-    
-            <button data-collapse-toggle="navbar-sticky" type="button" id="hamburger" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-              </svg>
-          </button>
-        </div>
-        <div id="nav" class="items-center justify-between hidden w-full md:hidden lg:flex md:w-auto md:order-1" id="navbar-sticky">
-          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-           
-            <li>
-              <a href="bedrijven.html" class=" font-epilogue block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 xl:text-xl xl:pt-4">Bedrijven</a>
-            </li>
-            <li>
-              <a href="blog.html" class=" font-epilogue block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 xl:text-xl xl:pt-4">Blog</a>
-            </li>
-            <li>
-              <a href="overOns.html" class="font-epilogue block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 xl:text-xl xl:pt-4">Over ons</a>
-            </li>
-            <li class="relative">
-                <button type="button" class="text-purple font-bold font-epilogue bg-white text-base border-purple border-solid border-2 mr-4 px-5 py-1 hover:bg-darkBlue focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-center xl:py-3 xl:px-8 xl:border-4 xl:text-xl"> <a href="">Contact</a></button>
-            </li>
-            <li class="relative sm:mt-4 xl:mt-0" >
-                <button type="button" class="text-white font-bold font-epilogue bg-purple px-5 py-1 text-base hover:bg-darkBlue focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-center xl:py-3 xl:px-8 xl:text-xl xl:mt-2"><a href="">Aanmelden</a></button>
-    
-            </li>
-          </ul>
-        </div>
-        </div>
-      </nav>
-      <main class="pt-16">
-
-        <section class="flex flex-col items-center bg-orange pb-16 lg:flex-row-reverse lg:justify-between lg:px-16">
-            <div class="mt-16 max-w-full md:mt-8 lg:mr-24 lg:max-w-[435px] ">
-            <img src="./img/jason-goodman-Oalh2MojUuk-unsplash.jpg" alt="">
-            </div>
-            <div class="font-epilogue lg:ml-24">
-                <h1 class="font-bolder text-5xl mx-8 mt-16  lg:ml-0 lg:max-w-[562px]">
-                    Vind een toekomstige werkkracht
-                </h1>
-                <p class="text-base mx-8 max-w-full mt-8 lg:max-w-[517px] lg:mx-0 lg:ml-0">Vindt bij Hirehero een toekomstige werkkracht. Bij ons vind je al de beste stagiair, dus de beste match qua skills en persoonlijkheid. En tijdens een stage besteedt u tijd en energie in deze nieuwe werkkracht. Die perfect gemaakt is om op die moment bij u in dienst genomen te worden.</p>
-
-                    <button type="button" class="text-white mt-8 mx-8 font-bold font-epilogue lg:max-w lg:mx-0 lg:mt-16 bg-purple px-5 py-2 text-base hover:bg-darkBlue focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-center xl:py-3 xl:px-8 xl:text-xl xl:mt-2"><a href="">Zoek je stage</a></button>
-
-            </div>
-
-
-        </section>
-
-        
-
-      
-
-        <section class="flex flex-col items-center bg-white/75 pb-16 lg:px-16 lg:flex-row lg:justify-between ">
-            <div class="max-w-full lg:ml-24 md:mt-8 lg:max-w-[435px]">
+      <section>
+      <div class="pt-12 lg:pt-28 pb-20 lg:pb-48" style="background-color: #9080FC; overflow-hidden; font-family: 'Epilogue', sans-serif;">
+        <div class="container px-4 lg:px-32 mx-auto"> <!-- Set px-4 for mobile and px-32 for larger screens -->
+          <div class="flex flex-wrap -m-8">
+            <div class="w-full md:w-1/2 p-8">
+              <div class="md:max-w-lg">
+                <span class="inline-block mb-8 px-3 py-1 text-black font-semibold rounded-full" style="background-color: #FFDAB9;">#1 Stageplatform in Vlaanderen bij bedrijven</span>
+                <h1 class="font-heading mb-8 text-4xl md:text-5xl text-white tracking-tighter">Vind de perfecte stagiair</h1>
+                <p class="mb-4 max-w-[528px] text-base text-white md:mb-8">
+                  Heeft je bedrijf nieuw talent nodig? Meld je aan bij Hirehero, plaats je stage-aanbod, en ontmoet gemotiveerde stagiairs. Ons AI-platform vindt de perfecte match. Ontdek je toekomstige toptalent!
+                </p>
                 
-                <img src="./img/clay-banks-LjqARJaJotc-unsplash.jpg" alt="">
-
+                <div class="flex flex-wrap -m-2 mb-14">
+                  
+                  <div class="w-auto p-2">
+                    <a class="inline-block px-5 py-4 text-white font-semibold tracking-tight rounded-lg focus:ring-4 transition duration-200"
+                       href="#"
+                       style="background-color: #FFDAB9; color: #000; hover: background-color: #FFC4A3; focus:ring-color: #FFB08E;">
+                       Log in
+                    </a>
+                </div>
+                                  <div class="w-auto p-2">
+                                    <a class="inline-flex items-center px-5 py-4 bg-[#97CAF9] hover:bg-[#C4E4F7] rounded-lg focus:ring-4 focus:ring-indigo-300 transition duration-200" href="#">
+                                      <div class="inline-block">
+                                      </div>
+                                      <span class="text-white font-semibold tracking-tight">Registreer</span>
+                                    </a>
+                                    
+                                    
+                  </div>
+                </div>
+                <div class="max-w-md">
+                  <div class="flex flex-wrap -m-1.5">
+                    <div class="w-auto p-1.5">
+                      <div class="flex flex-wrap">
+                        <div class="w-auto">
+                          <img src="avatar.png" alt="">
+                        </div>
+                        <div class="w-auto -ml-5">
+                          <img src="avatar2.png" alt="">
+                        </div>
+                        <div class="w-auto -ml-5">
+                          <img src="avatar3.png" alt="">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-1 p-1.5">
+                      <p class="text-white tracking-tight">Start nu en sluit je aan bij 12.000+ tevreden werkgevers!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <div class="font-epilogue lg:mr-24">
-                <h2 class="font-bolder text-4xl mx-8 mt-16  lg:mx-0 lg:max-w-[562px]">
-                    <span class="text-purple">Inclusie</span> is belangrijk 
-                </h2>
-                <p class="text-base mx-8 max-w-full mt-8 lg:max-w-[517px] lg:mx-0 ">Geen discriminatie op basis van huidskleur, naam, gender, enz. Sollicitaties gebeuren <span class="text-purple font-bolder">anoniem</span>. Geen foto en ook geen naam dat werkgevers zullen zien.
-                    <br>
-                    <br>
-                    Een naam en foto worden pas bekend gemaakt nadat er een match is. Bedrijven zijn verplicht om elke persoon waarmee ze matchen, uit te nodigen voor een gesprek.</p>
-
-
+            <div class="w-full md:w-1/2 p-8">
+              <img class="transform hover:-translate-y-2 transition duration-500" src="Group 12663.png" alt="">
             </div>
-
-
-
-
-
-            
-        </section>
-
+          </div>
+        </div>
+      </div>
+    </section>
+        
+        
+        <!-- Feature section -- 2 column image x text -->
+<section class="overflow-hidden px-4 py-12 md:py-18 bg-white/75">
+  <div class="container mx-auto px-4 lg:px-32 space-y-24 md:space-y-36">
+      <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
+          <div class="max-w-md space-y-6 lg:text-left">
+              <span class="inline-flex items-center rounded-full bg-[#FFDAB9] px-2 py-1 text-sm font-semibold shadow-sm" style="color: #9080FC;">
+                  <!-- Heroicon name: outline/tag -->
+                  <svg fill="none" stroke="#9080FC" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                  </svg>
+                  Gelijkheid
+              </span>
+              <h3 class="text-3xl font-semibold text-heading lg:text-4xl">
+                  <span class="text-purple">Gelijkheid</span> is belangrijk
+              </h3>
+              <p class="text-base font-epilogue">
+                  Geen discriminatie op basis van huidskleur, naam, gender, enz. Sollicitaties gebeuren <span class="text-purple font-bolder">anoniem</span>. Geen foto en ook geen naam dat werkgevers zullen zien.
+                  <br><br>
+                  Een naam en foto worden pas bekend gemaakt nadat er een match is. Bedrijven zijn verplicht om elke persoon waarmee ze matchen, uit te nodigen voor een gesprek.
+              </p>
+          </div>
+          <div class="max-w-lg">
+              <img src="Mask group.png" alt="" class="w-full" />
+          </div>
+      </div>
+      <div class="flex flex-col items-center justify-between gap-6 lg:flex-row-reverse">
+          <div class="max-w-md space-y-6 lg:text-left">
+              <span class="inline-flex items-center rounded-full bg-[#C4E4F7] px-2 py-1 text-sm font-semibold shadow-sm" style="color: #9080FC;">
+                  <!-- Heroicon name: outline/shield-check -->
+                  <svg fill="none" stroke="#9080FC" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                  AI-powered
+              </span>
+              <h3 class="text-3xl font-semibold text-heading lg:text-4xl">
+                  <span class="text-purple">AI-matching</span> voor stages
+              </h3>
+              <p class="text-base font-epilogue">
+                Gebruik onze geavanceerde AI-gestuurde zoekfunctie om nauwkeurig stagiaires te vinden die voldoen aan specifieke criteria. Typ eenvoudig wat u zoekt in het tekstveld en ontvang direct aanbevelingen voor stagiairs die uw team kunnen versterken.
+                <br>Binnenkort breiden we deze technologie uit, waardoor u actief stagiaires kunt zoeken op basis van hun kwaliteiten, en het vinden van de perfecte kandidaat nog efficiënter wordt.              </p>
+          </div>
+          <div class="max-w-lg">
+              <img src="Mask group.png" alt="" class="w-full" />
+          </div>
+      </div>
+      <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
+        <div class="max-w-md space-y-6 lg:text-left">
+            <span class="inline-flex items-center rounded-full bg-[#FFDAB9] px-2 py-1 text-sm font-semibold shadow-sm" style="color: #9080FC;">
+                <!-- Heroicon name: outline/tag -->
+                <svg fill="none" stroke="#9080FC" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                </svg>
+                Bedrijfsprofiel
+            </span>
+            <h3 class="text-3xl font-semibold text-heading lg:text-4xl">
+                Uniek <span class="text-purple">bedrijfsprofiel</span>
+            </h3>
+            <p class="text-base font-epilogue">
+              Maak een krachtige eerste indruk met een gepersonaliseerd bedrijfsprofiel. Toon uw bedrijfscultuur, innovatieve projecten en kernwaarden om talentvolle stagiairs aan te trekken. Een op maat gemaakt profiel helpt uw merk te versterken en zorgt ervoor dat u opvalt bij de juiste kandidaten. Begin vandaag nog en ontdek hoe eenvoudig het is om de perfecte match te vinden!
+            </div>
+        <div class="max-w-lg">
+            <img src="Group 12784.png" alt="" class="w-full" />
+        </div>
+    </div>
+  </div>
+</section>
 
 
         
-        <div
-        class="w-full max-w-screen px-6 sm:px-8 md:px-16 py-10 md:py-20 rounded-xl bg-white75 min-h-[300px] m-0 shadow-[0px_14px_28px_-5px_rgba(0,0,0,0.21)] bg-white/75">
-        <h1 class="font-bolder text-4xl font-epilogue text-center mb-2  ">Tarieven</h1>
-        <ul class="flex items-start justify-between gap-8 mt-10 md:flex-col md:mx-24 flex-col lg:flex-row">
-            <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
-                 
-        </ul>
+   
+<section class="flex flex-col pb-[80px] pt-[80px] bg-white/75 font-epilogue">
+  <div class="ml-[auto] mr-[auto] flex w-[100%] max-w-[1300px] flex-col pl-[16px] pr-[16px]">        <h1 class="font-heading text-left text-5xl xs:text-6xl md:text-7xl font-bold ">
+    <span>Onze</span>
+    <span class="font-serif italic">features</span>
+    <span>op een rijtje</span>
+  </h1>
+
+    <div class="flex flex-col items-center gap-[56px]">
+      <div class="flex max-w-[900px] flex-col items-start gap-[6px]">
 
         
-    <div class="flex flex-col md:flex-row px-2 md:px-0">
-        <div class="w-full md:w-1/3 bg-white rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 md:mr-4 mb-10 md:mb-0">
-            <h3 class="text-gray-600 text-lg">Premium</h3>
-            <p class="text-gray-600 mt-1"><span class="font-bold text-black text-4xl">€249.00</span> /Month</p>
-            <p class="text-sm text-gray-600 mt-2">For most businesses that want to optimize web queries.</p>
-            <div class="text-sm text-gray-600 mt-4">
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
+      </div>
+      <div class="flex w-[100%] flex-col gap-[12px]">
+        <div class="flex w-[100%] flex-col gap-[12px] sm:flex-col md:flex-row">
+          <div class="w-[100%] sm:w-[100%] md:w-[60%]">
+            <div class="bopacity-[100%] flex h-[100%] flex-col justify-between overflow-hidden rounded-[16px] border-[1px] border-[#d5ecf8] border-opacity-[10%] bg-[#9080FC] text-[#ffffff] text-opacity-[100%]">
+              <div class="flex flex-col gap-[12px] pb-[32px] pl-[32px] pr-[32px] pt-[32px]">
+                <i class="inline-block h-[auto] w-[24px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"></path>
+                  </svg>
+                </i>
+                <div class="flex max-w-[600px] flex-col gap-[6px]">
+                  <h4 class="text-[20px] font-medium">AI-gestuurde matching</h4>
+                  <p class="text-left text-[16px] font-light opacity-[90%]">Onze geavanceerde AI-technologie koppelt bedrijven aan de meest geschikte stagiairs op basis van vaardigheden, persoonlijkheid en voorkeuren. Bespaar tijd en vind moeiteloos de perfecte match voor uw bedrijf.
+                  </p>
+                </div>
+              </div>
             </div>
-            <button class="w-full text-purple-700 border border-purple-700 rounded hover:bg-purple-700 hover:text-white hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4">Choose Plan</button>
-        </div>
-        <div class="w-full md:w-1/3 text-white bg-purple-700 rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 md:mr-4 mb-10 md:mb-0">
-            <h3 class="text-lg">Popular</h3>
-            <p class="mt-1"><span class="font-bold text-4xl">€175.00</span> /Month</p>
-            <p class="text-sm opacity-75 mt-2">For most businesses that want to optimize web queries.</p>
-            <div class="text-sm mt-4">
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>❌ Lorem Ipsum</p>
+          </div>
+          <div class="w-[100%] sm:w-[100%] md:w-[40%]">
+            <div class="bopacity-[100%] flex h-[100%] flex-col justify-between overflow-hidden rounded-[16px] border-[1px] border-[#d5ecf8] border-opacity-[10%] bg-[#97CAF9] text-[#ffffff] text-opacity-[100%]">
+              <div class="flex flex-col gap-[12px] pb-[32px] pl-[32px] pr-[32px] pt-[32px]">
+                <i class="inline-block h-[auto] w-[24px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672Zm-7.518-.267A8.25 8.25 0 1 1 20.25 10.5M8.288 14.212A5.25 5.25 0 1 1 17.25 10.5"></path>
+                  </svg>
+                </i>
+                <div class="flex max-w-[600px] flex-col gap-[6px]">
+                  <h4 class="text-[20px] font-medium">Personaliseerbaar bedrijfsprofiel</h4>
+                  <p class="text-left text-[16px] font-light opacity-[90%]">Creëer een uniek bedrijfsprofiel dat uw bedrijfscultuur, projecten en kernwaarden weergeeft. Trek talentvolle stagiairs aan door uw merk te versterken en uzelf te onderscheiden van de concurrentie.
+                  </p>
+                </div>
+              </div>
             </div>
-            <button class="w-full text-purple-700 bg-white rounded opacity-75 hover:opacity-100 hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4">Choose Plan</button>
+          </div>
         </div>
-        <div class="w-full md:w-1/3 bg-white rounded-lg shadow hover:shadow-xl transition duration-100 ease-in-out p-6 mb-10 md:mb-0">
-            <h3 class="text-gray-600 text-lg">Free</h3>
-            <p class="text-gray-600 mt-1"><span class="font-bold text-black text-4xl">Basis</p>
-            <p class="text-sm text-gray-600 mt-2">For most businesses that want to optimize web queries.</p>
-            <div class="text-sm text-gray-600 mt-4">
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>✅ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>❌ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>❌ Lorem Ipsum</p>
-                <p class="my-2"><span class="fa fa-check-circle mr-2 ml-1"></span>❌ Lorem Ipsum</p>
+        <div class="flex w-[100%] flex-col gap-[12px] sm:flex-col md:flex-row">
+          <div class="w-[100%] sm:w-[100%] md:w-[40%]">
+            <div class="bopacity-[100%] flex h-[100%] flex-col justify-between overflow-hidden rounded-[16px] border-[1px] border-[#d5ecf8] border-opacity-[10%] bg-[#97CAF9] text-[#ffffff] text-opacity-[100%]">
+              <div class="flex flex-col gap-[12px] pb-[32px] pl-[32px] pr-[32px] pt-[32px]">
+                <i class="inline-block h-[auto] w-[24px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
+                  </svg>
+                </i>
+                <div class="flex max-w-[600px] flex-col gap-[6px]">
+                  <h4 class="text-[20px] font-medium">Gebruiksvriendelijk</h4>
+                  <p class="text-left text-[16px] font-light opacity-[90%]">Gebruik onze swipe-functie om eenvoudig door studentenprofielen te bladeren op basis van hun kwaliteiten. Swipe naar rechts om geïnteresseerd te zijn en naar links om verder te zoeken. Maak het selectieproces leuker en sneller.
+                  </p>
+                </div>
+              </div>
             </div>
-            <button class="w-full text-purple-700 border border-purple-700 rounded hover:bg-purple-700 hover:text-white hover:shadow-xl transition duration-150 ease-in-out py-4 mt-4">Choose Plan</button>
+          </div>
+          <div class="w-[100%] sm:w-[100%] md:w-[60%]">
+            <div class="bopacity-[100%] flex h-[100%] flex-col justify-between overflow-hidden rounded-[16px] border-[1px] border-[#d5ecf8] border-opacity-[10%] bg-[#9080FC] text-[#ffffff] text-opacity-[100%]">
+              <div class="flex flex-col gap-[12px] pb-[32px] pl-[32px] pr-[32px] pt-[32px]">
+                <i class="inline-block h-[auto] w-[24px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m6.75 7.5 3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0 0 21 18V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v12a2.25 2.25 0 0 0 2.25 2.25Z"></path>
+                  </svg>
+                </i>
+                <div class="flex max-w-[600px] flex-col gap-[6px]">
+                  <h4 class="text-[20px] font-medium">Uniek beheersysteem</h4>
+                  <p class="text-left text-[16px] font-light opacity-[90%]">Ons gebruiksvriendelijke dashboard stelt bedrijven in staat sollicitaties moeiteloos te beheren zonder door talloze CV's te hoeven spitten. Dit systeem centraliseert alle sollicitatie-activiteiten, waardoor u alles overzichtelijk op één plek hebt. Bespaar tijd en moeite en richt u volledig op het selecteren van de beste kandidaten voor uw stageplaatsen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-</div>
+  </div>
+</section>
+
+     
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="relative z-[20] bg-[#FFDAB9] font-epilogue pb-[160px]">
+  <div class="ml-[auto] mr-[auto] max-w-[1300px] pl-[16px] pr-[16px]">
+    <div class="relative grid grid-cols-1 items-start gap-[20px] sm:grid-cols-1 sm:gap-[20px] md:grid-cols-1 md:gap-[20px] lg:grid-cols-2 lg:gap-[120px]">
+      <div class="static top-[200px] mt-[80px] rounded-[9999px] pb-[120px] text-[18px] sm:static sm:mt-[80px] sm:pb-[120px] md:static md:mt-[80px] md:pb-[120px] lg:sticky lg:mt-[140px] lg:pb-0">
+        <div class="max-w-[640px]">
+          <h2 class="text-[36px] font-semibold leading-[1.15] tracking-[-0.025em] sm:text-[60px]">Samen met u, elke stap in het proces</h2>
+          <div class="mt-[56px] flex gap-[24px] border-t-[1px] border-[black] border-opacity-[20%] pt-[56px]">
+            <img src="https://assets.ycodeapp.com/assets/app63557/Images/Obo3jYgWhzZxSdJa0N7b6vXxYITjGjhKa7bSQrwC.jpg" srcset="https://assets.ycodeapp.com/assets/app63557/images/AkR1Aq9pJq3QD6uQ0qTnJB4iPPfqu3xrz8a6ZINH.jpg 500w, https://assets.ycodeapp.com/assets/app63557/images/zRk4pwvcscuAta3kxa8XJIfTMqIuq8HsvB7uBeNn.jpg 150w, https://assets.ycodeapp.com/assets/app63557/Images/Obo3jYgWhzZxSdJa0N7b6vXxYITjGjhKa7bSQrwC.jpg 600w" sizes="160px" class="h-[80px] w-[80px] max-w-[100%] rounded-[12px] object-cover" />
+            <div class="max-w-[460px] space-y-[12px]">
+              <p class="text-[18px]">Bij Hirehero verbinden we bedrijven met stagiaires in elke stap van het proces. Ons platform maakt het eenvoudig om stages te plaatsen, sollicitaties te beoordelen, en interviews te beheren.</p>
+              <div><span class="inline-block text-[18px] font-semibold">Jeffrey Talemans</span> <span class="inline-block text-[18px] font-normal opacity-[50%]">Co-founder bij Hirehero</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative mt-[0px] flex flex-col gap-[8px] sm:mt-[0px] md:mt-[0px] lg:mt-[140px]">
+        <div class="opacity-[100%] sticky top-[100px] mb-[-8px] ml-[-8px] mr-[-8px] mt-[-8px] flex flex-col rounded-[16px] border-[8px] border-[#F3EFEF] bg-[#9080FC] pb-[32px] pl-[32px] pr-[32px] pt-[32px] text-[#F3EFEF] sm:top-[100px] sm:pb-[56px] sm:pl-[56px] sm:pr-[56px] sm:pt-[56px] md:top-[100px] lg:top-[200px]">
+          <span class="mb-[32px] text-[60px]">1.</span>
+          <div class="mb-[12px]"><h3 class="text-[30px] font-semibold leading-[1.15] tracking-[-0.025em]">Registreer je bedrijf</h3></div>
+          <p class="text-[20px]">Maak een profiel aan en beschrijf de missie en bedrijfscultuur. Een sterk profiel trekt de beste stagiaires aan.</p>
+        </div>
+        <div class="opacity-[100%] sticky top-[100px] mb-[-8px] ml-[-8px] mr-[-8px] mt-[-8px] flex flex-col rounded-[16px] border-[8px] border-[#F3EFEF] bg-[#9080FC] pb-[33px] pl-[33px] pr-[33px] pt-[33px] text-[#F3EFEF] sm:top-[100px] sm:pb-[56px] sm:pl-[56px] sm:pr-[56px] sm:pt-[56px] md:top-[100px] lg:top-[200px]">
+          <span class="mb-[32px] text-[60px]">2.</span>
+          <div class="mb-[12px]"><h3 class="text-[30px] font-semibold leading-[1.15] tracking-[-0.025em]">Plaats stageaanbiedingen</h3></div>
+          <p class="text-[20px]">Voeg eenvoudig stages toe met rollen, verantwoordelijkheden en vaardigheden.</p>
+        </div>
+        <div class="opacity-[100%] sticky top-[100px] mb-[-8px] ml-[-8px] mr-[-8px] mt-[-8px] flex flex-col rounded-[16px] border-[8px] border-[#F3EFEF] bg-[#9080FC] pb-[33px] pl-[33px] pr-[33px] pt-[33px] text-[#F3EFEF] sm:top-[100px] sm:pb-[56px] sm:pl-[56px] sm:pr-[56px] sm:pt-[56px] md:top-[100px] lg:top-[200px]">
+          <span class="mb-[32px] text-[60px]">3.</span>
+          <div class="mb-[12px]"><h3 class="text-[30px] font-semibold leading-[1.15] tracking-[-0.025em]">Beoordeel sollicitaties</h3></div>
+          <p class="text-[20px]">Ontvang en beoordeel sollicitaties met onze AI-gestuurde technologie die de beste kandidaten voorstelt.</p>
+        </div>
+        <div class="opacity-[100%] sticky top-[100px] mb-[-8px] ml-[-8px] mr-[-8px] mt-[-8px] flex flex-col rounded-[16px] border-[8px] border-[#F3EFEF] bg-[#9080FC] pb-[33px] pl-[33px] pr-[33px] pt-[33px] text-[#F3EFEF] sm:top-[100px] sm:pb-[56px] sm:pl-[56px] sm:pr-[56px] sm:pt-[56px] md:top-[100px] lg:top-[200px]">
+          <span class="mb-[32px] text-[60px]">4.</span>
+          <div class="mb-[12px]"><h3 class="text-[30px] font-semibold leading-[1.15] tracking-[-0.025em]">Interview en selectie</h3></div>
+          <p class="text-[20px]">Beheer interviews en selecteer de beste potentiële stagiairs via ons Hirehero.</p>
+        </div>
+        <div class="opacity-[100%] sticky top-[200px] mb-[-8px] ml-[-8px] mr-[-8px] mt-[-8px] flex flex-col rounded-[16px] border-[8px] border-[#F3EFEF] bg-[#9080FC] pb-[32px] pl-[32px] pr-[32px] pt-[32px] text-[#F3EFEF] sm:pb-[56px] sm:pl-[56px] sm:pr-[56px] sm:pt-[56px]">
+          <span class="mb-[32px] text-[60px]">5.</span>
+          <div class="mb-[12px]"><h3 class="text-[30px] font-semibold leading-[1.15] tracking-[-0.025em]">Onboarding van stagiairs</h3></div>
+          <p class="text-[18px] sm:text-[20px]">Gebruik onze middelen voor een soepel onboardingproces om de samenwerking optimaal te starten.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="relative py-20 bg-white/75 overflow-hidden px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 font-epilogue">
+  <img class="absolute top-0 left-0 mt-44" src="light-blue-left.png" alt="">
+  <img class="absolute top-0 right-0 mt-10 -mr-20 sm:-mr-0" src="star-right.svg" alt="">
+  <div class="relative container mx-auto px-4 lg:px-16">
+    <div class="max-w-[1600px] mx-auto">
+      <div class="mb-24">
+        <span class="inline-block py-1 px-3 mb-4 text-xs font-semibold text-white" style="background-color: #9080FC; border-radius: 9999px;">VEELGESTELDE VRAGEN</span>
+        <h1 class="font-heading text-left text-5xl xs:text-6xl md:text-7xl font-bold">
+          <span>Veelgestelde vragen</span>
+        </h1>
+      </div>
+      <button class="flex mb-8 p-8 group w-full items-start justify-between rounded-3xl border text-left" style="background-color: #FFDAB9;">
+        <div class="max-w-full pr-5">
+          <h3 class="text-xl font-semibold text-black group-hover:text-purple-600">Hoe garanderen jullie gelijkheid?</h3>
+          <p class="hidden group-hover:block mt-3 text-lg text-gray-500">Bij Hirehero garanderen we gelijkheid door gebruik te maken van een inclusief matchingalgoritme dat vooroordelen minimaliseert en door persoonlijke gegevens tijdens de eerste beoordelingsfase te anonimiseren. We werken ook samen met organisaties die gelijkheid bevorderen en passen onze processen voortdurend aan op basis van feedback om eerlijke kansen voor iedereen te waarborgen.</p>
+        </div>
+        <div>
+          <span class="hidden group-hover:block">
+            <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 0.045166H1.46194C1.19673 0.045166 0.942374 0.150523 0.754838 0.338059C0.567302 0.525596 0.461945 0.77995 0.461945 1.04517C0.461945 1.31038 0.567302 1.56474 0.754838 1.75227C0.942374 1.93981 1.19673 2.04517 1.46194 2.04517H15.4619C15.7272 2.04517 15.9815 1.93981 16.1691 1.75227C16.3566 1.56474 16.4619 1.31038 16.4619 1.04517C16.4619 0.77995 16.3566 0.525596 16.1691 0.338059C15.9815 0.150523 15.7272 0.045166 15.4619 0.045166Z" fill="#9080FC"></path>
+            </svg>
+          </span>
+          <span class="block group-hover:hidden">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 7H9.46194V1C9.46194 0.734784 9.35659 0.48043 9.16905 0.292893C8.98151 0.105357 8.72716 0 8.46194 0C8.19673 0 7.94237 0.105357 7.75484 0.292893C7.5673 0.48043 7.46194 0.734784 7.46194 1V7H1.46194C1.19673 7 0.942374 7.10536 0.754838 7.29289C0.567302 7.48043 0.461945 7.73478 0.461945 8C0.461945 8.26522 0.567302 8.51957 0.754838 8.70711C0.942374 8.89464 1.19673 9 1.46194 9H7.46194V15C7.46194 15.2652 7.5673 15.5196 7.75484 15.7071C7.94237 15.8946 8.19673 16 8.46194 16C8.72716 16 8.98151 15.8946 9.16905 15.7071C9.35659 15.5196 9.46194 15.2652 9.46194 15V9H15.4619C15.7272 9 15.9815 8.89464 16.1691 8.70711C16.3566 8.51957 16.4619 8.26522 16.4619 8C16.4619 7.73478 16.3566 7.48043 16.1691 7.29289C15.9815 7.10536 15.7272 7 15.4619 7Z" fill="black"></path>
+            </svg>
+          </span>
+        </div>
+      </button>
+      <button class="flex mb-8 p-8 group w-full items-start justify-between rounded-3xl border text-left" style="background-color: #FFDAB9;">
+        <div class="max-w-full pr-5">
+          <h3 class="text-xl font-semibold text-black group-hover:text-purple-600">Hirehero vs. andere stageplatformen
+          </h3>
+          <p class="hidden group-hover:block mt-3 text-lg text-gray-500">Hirehero onderscheidt zich door zijn innovatieve en gebruiksvriendelijke benadering. Met onze AI-gestuurde matching technologie vinden bedrijven snel de beste stagiairs op basis van hun unieke vaardigheden en kwaliteiten. Het intuïtieve swipe-systeem maakt het eenvoudig en leuk om door kandidaten te bladeren. Bovendien centraliseert ons platform alle sollicitatie-activiteiten, waardoor u tijd en moeite bespaart. Kies voor Hirehero en ervaar een naadloos, efficiënt en persoonlijk wervingsproces.
+          </p>
+        </div>
+        <div>
+          <span class="hidden group-hover:block">
+            <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 0.045166H1.46194C1.19673 0.045166 0.942374 0.150523 0.754838 0.338059C0.567302 0.525596 0.461945 0.77995 0.461945 1.04517C0.461945 1.31038 0.567302 1.56474 0.754838 1.75227C0.942374 1.93981 1.19673 2.04517 1.46194 2.04517H15.4619C15.7272 2.04517 15.9815 1.93981 16.1691 1.75227C16.3566 1.56474 16.4619 1.31038 16.4619 1.04517C16.4619 0.77995 16.3566 0.525596 16.1691 0.338059C15.9815 0.150523 15.7272 0.045166 15.4619 0.045166Z" fill="#9080FC"></path>
+          </svg>
+          </span>
+          <span class="block group-hover:hidden">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 7H9.46194V1C9.46194 0.734784 9.35659 0.48043 9.16905 0.292893C8.98151 0.105357 8.72716 0 8.46194 0C8.19673 0 7.94237 0.105357 7.75484 0.292893C7.5673 0.48043 7.46194 0.734784 7.46194 1V7H1.46194C1.19673 7 0.942374 7.10536 0.754838 7.29289C0.567302 7.48043 0.461945 7.73478 0.461945 8C0.461945 8.26522 0.567302 8.51957 0.754838 8.70711C0.942374 8.89464 1.19673 9 1.46194 9H7.46194V15C7.46194 15.2652 7.5673 15.5196 7.75484 15.7071C7.94237 15.8946 8.19673 16 8.46194 16C8.72716 16 8.98151 15.8946 9.16905 15.7071C9.35659 15.5196 9.46194 15.2652 9.46194 15V9H15.4619C15.7272 9 15.9815 8.89464 16.1691 8.70711C16.3566 8.51957 16.4619 8.26522 16.4619 8C16.4619 7.73478 16.3566 7.48043 16.1691 7.29289C15.9815 7.10536 15.7272 7 15.4619 7Z" fill="black"></path>
+            </svg>
+          </span>
+        </div>
+      </button>
+      <button class="flex mb-8 p-8 group w-full items-start justify-between rounded-3xl border text-left" style="background-color: #FFDAB9;">
+        <div class="max-w-full pr-5">
+          <h3 class="text-xl font-semibold text-black group-hover:text-purple-600">Is Hirehero gratis te gebruiken?</h3>
+          <p class="hidden group-hover:block mt-3 text-lg text-gray-500">
+            Hirehero biedt flexibele abonnementsopties voor elk budget. Kies uit een gratis versie, een basisabonnement voor €175 per maand, of een premium abonnement voor €249 per maand. Bespaar 10% met een jaarabonnement: betaal €1890 per jaar voor basis en €2689,20 per jaar voor premium. Start met een gratis 14-daagse proefperiode en ontdek welke optie het beste bij uw bedrijf past. Profiteer van exclusieve functies en verbeter uw wervingsproces met Hirehero!
+          </p>
+        </div>
+        <div>
+          <span class="hidden group-hover:block">
+            <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 0.045166H1.46194C1.19673 0.045166 0.942374 0.150523 0.754838 0.338059C0.567302 0.525596 0.461945 0.77995 0.461945 1.04517C0.461945 1.31038 0.567302 1.56474 0.754838 1.75227C0.942374 1.93981 1.19673 2.04517 1.46194 2.04517H15.4619C15.7272 2.04517 15.9815 1.93981 16.1691 1.75227C16.3566 1.56474 16.4619 1.31038 16.4619 1.04517C16.4619 0.77995 16.3566 0.525596 16.1691 0.338059C15.9815 0.150523 15.7272 0.045166 15.4619 0.045166Z" fill="#9080FC"></path>
+          </svg>
+          </span>
+          <span class="block group-hover:hidden">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 7H9.46194V1C9.46194 0.734784 9.35659 0.48043 9.16905 0.292893C8.98151 0.105357 8.72716 0 8.46194 0C8.19673 0 7.94237 0.105357 7.75484 0.292893C7.5673 0.48043 7.46194 0.734784 7.46194 1V7H1.46194C1.19673 7 0.942374 7.10536 0.754838 7.29289C0.567302 7.48043 0.461945 7.73478 0.461945 8C0.461945 8.26522 0.567302 8.51957 0.754838 8.70711C0.942374 8.89464 1.19673 9 1.46194 9H7.46194V15C7.46194 15.2652 7.5673 15.5196 7.75484 15.7071C7.94237 15.8946 8.19673 16 8.46194 16C8.72716 16 8.98151 15.8946 9.16905 15.7071C9.35659 15.5196 9.46194 15.2652 9.46194 15V9H15.4619C15.7272 9 15.9815 8.89464 16.1691 8.70711C16.3566 8.51957 16.4619 8.26522 16.4619 8C16.4619 7.73478 16.3566 7.48043 16.1691 7.29289C15.9815 7.10536 15.7272 7 15.4619 7Z" fill="black"></path>
+            </svg>
+          </span>
+        </div>
+      </button>
+      <button class="flex mb-8 p-8 group w-full items-start justify-between rounded-3xl border text-left" style="background-color: #FFDAB9;">
+        <div class="max-w-full pr-5">
+          <h3 class="text-xl font-semibold text-black group-hover:text-purple-600">Hoe kan ik effectief filteren uit de ontvangen sollicitaties?</h3>
+          <p class="hidden group-hover:block mt-3 text-lg text-gray-500">Maak gebruik van ons filtersysteem om kandidaten te sorteren op relevante vaardigheden en opleidingsniveau. Ons platform biedt ook de mogelijkheid om directe vragen te stellen aan sollicitanten via de chatfunctie.</p>
+        </div>
+        <div>
+          <span class="hidden group-hover:block">
+            <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 0.045166H1.46194C1.19673 0.045166 0.942374 0.150523 0.754838 0.338059C0.567302 0.525596 0.461945 0.77995 0.461945 1.04517C0.461945 1.31038 0.567302 1.56474 0.754838 1.75227C0.942374 1.93981 1.19673 2.04517 1.46194 2.04517H15.4619C15.7272 2.04517 15.9815 1.93981 16.1691 1.75227C16.3566 1.56474 16.4619 1.31038 16.4619 1.04517C16.4619 0.77995 16.3566 0.525596 16.1691 0.338059C15.9815 0.150523 15.7272 0.045166 15.4619 0.045166Z" fill="#9080FC"></path>
+          </svg>
+          </span>
+          <span class="block group-hover:hidden">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 7H9.46194V1C9.46194 0.734784 9.35659 0.48043 9.16905 0.292893C8.98151 0.105357 8.72716 0 8.46194 0C8.19673 0 7.94237 0.105357 7.75484 0.292893C7.5673 0.48043 7.46194 0.734784 7.46194 1V7H1.46194C1.19673 7 0.942374 7.10536 0.754838 7.29289C0.567302 7.48043 0.461945 7.73478 0.461945 8C0.461945 8.26522 0.567302 8.51957 0.754838 8.70711C0.942374 8.89464 1.19673 9 1.46194 9H7.46194V15C7.46194 15.2652 7.5673 15.5196 7.75484 15.7071C7.94237 15.8946 8.19673 16 8.46194 16C8.72716 16 8.98151 15.8946 9.16905 15.7071C9.35659 15.5196 9.46194 15.2652 9.46194 15V9H15.4619C15.7272 9 15.9815 8.89464 16.1691 8.70711C16.3566 8.51957 16.4619 8.26522 16.4619 8C16.4619 7.73478 16.3566 7.48043 16.1691 7.29289C15.9815 7.10536 15.7272 7 15.4619 7Z" fill="black"></path>
+            </svg>
+          </span>
+        </div>
+      </button>
+      <button class="flex p-8 group w-full items-start justify-between rounded-3xl border text-left" style="background-color: #FFDAB9;">
+        <div class="max-w-full pr-5">
+          <h3 class="text-xl font-semibold text-black group-hover:text-purple-600">Hoe werkt de AI-gestuurde matching op het platform?</h3>
+          <p class="hidden group-hover:block mt-3 text-lg text-gray-500">Onze AI-gestuurde matchmaking op Hirehero laat studenten hun droomstage beschrijven in een speciaal tekstvak. De AI analyseert deze beschrijvingen op basis van sleutelwoorden, vaardigheden en andere relevante criteria. Dit geavanceerde systeem matcht studenten vervolgens met de meest geschikte stageplekken die beschikbaar zijn bij de aangesloten bedrijven. In een toekomstige fase van ons platform zullen bedrijven ook actief kunnen zoeken naar studenten op basis van hun capaciteiten en vaardigheden.</p>
+        </div>
+        <div>
+          <span class="hidden group-hover:block">
+            <svg width="17" height="3" viewBox="0 0 17 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 0.045166H1.46194C1.19673 0.045166 0.942374 0.150523 0.754838 0.338059C0.567302 0.525596 0.461945 0.77995 0.461945 1.04517C0.461945 1.31038 0.567302 1.56474 0.754838 1.75227C0.942374 1.93981 1.19673 2.04517 1.46194 2.04517H15.4619C15.7272 2.04517 15.9815 1.93981 16.1691 1.75227C16.3566 1.56474 16.4619 1.31038 16.4619 1.04517C16.4619 0.77995 16.3566 0.525596 16.1691 0.338059C15.9815 0.150523 15.7272 0.045166 15.4619 0.045166Z" fill="#9080FC"></path>
+          </svg>
+          </span>
+          <span class="block group-hover:hidden">
+            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.4619 7H9.46194V1C9.46194 0.734784 9.35659 0.48043 9.16905 0.292893C8.98151 0.105357 8.72716 0 8.46194 0C8.19673 0 7.94237 0.105357 7.75484 0.292893C7.5673 0.48043 7.46194 0.734784 7.46194 1V7H1.46194C1.19673 7 0.942374 7.10536 0.754838 7.29289C0.567302 7.48043 0.461945 7.73478 0.461945 8C0.461945 8.26522 0.567302 8.51957 0.754838 8.70711C0.942374 8.89464 1.19673 9 1.46194 9H7.46194V15C7.46194 15.2652 7.5673 15.5196 7.75484 15.7071C7.94237 15.8946 8.19673 16 8.46194 16C8.72716 16 8.98151 15.8946 9.16905 15.7071C9.35659 15.5196 9.46194 15.2652 9.46194 15V9H15.4619C15.7272 9 15.9815 8.89464 16.1691 8.70711C16.3566 8.51957 16.4619 8.26522 16.4619 8C16.4619 7.73478 16.3566 7.48043 16.1691 7.29289C15.9815 7.10536 15.7272 7 15.4619 7Z" fill="black"></path>
+          </svg>
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+</section>
+  
       </main>
       <footer class="bg-orange font-epilogue dark:bg-gray-900">
         <section class="py-20 ">
@@ -194,10 +584,10 @@
                         <h4 class="text-lg text-gray-900 font-medium mb-7 ">Service</h4>
                         <ul class="text-sm  transition-all duration-500">
                             <li class="mb-6">
-                                <a href="javascript:;" class="cursor-pointer text-gray-600 hover:text-gray-900">Bedrijven</a>
+                                <a href="bedrijven.html" class="cursor-pointer text-gray-600 hover:text-gray-900">Bedrijven</a>
                             </li>
                             <li class="mb-6">
-                                <a href="javascript:;" class="cursor-pointer text-gray-600 hover:text-gray-900">Studenten</a>
+                                <a href="studenten.html" class="cursor-pointer text-gray-600 hover:text-gray-900">Studenten</a>
                             </li>
                             <li class="mb-6">
                                 <a href="blog.html" class="cursor-pointer  text-gray-600 hover:text-gray-900">Blog</a>
@@ -213,16 +603,16 @@
                         <h4 class="text-lg text-gray-900 font-medium mb-7">Juridisch</h4>
                         <ul class="text-sm  transition-all duration-500">
                             <li class="mb-6">
-                                <a href="javascript:;" class="cursor-pointer text-gray-600 hover:text-gray-900">Algemene voorwaarden</a>
+                                <a href="algemenevoorwaarden.html" class="cursor-pointer text-gray-600 hover:text-gray-900">Algemene voorwaarden</a>
                             </li>
                             <li class="mb-6">
-                                <a href="javascript:;" class="cursor-pointer text-gray-600 hover:text-gray-900">Veelgestelde vragen</a>
+                                <a href="veelgesteldevragen" class="cursor-pointer text-gray-600 hover:text-gray-900">Veelgestelde vragen</a>
                             </li>
                             <li class="mb-6">
-                                <a href="javascript:;" class="cursor-pointer  text-gray-600 hover:text-gray-900">Cookie policy</a>
+                                <a href="cookiepolicy.html" class="cursor-pointer  text-gray-600 hover:text-gray-900">Cookie policy</a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="cursor-pointer  text-gray-600 hover:text-gray-900">Privacy policy</a>
+                                <a href="privacy.html" class="cursor-pointer  text-gray-600 hover:text-gray-900">Privacy policy</a>
                             </li>
                         </ul>
                     </div>
@@ -321,14 +711,12 @@
                                         d="M13.9191 1.10651C14.558 1.27906 15.0602 1.78251 15.2299 2.42069C15.5388 3.57887 15.5388 5.99687 15.5388 5.99687C15.5388 5.99687 15.5388 8.41487 15.2299 9.57306C15.0578 10.2136 14.5556 10.7171 13.9191 10.8872C12.7638 11.1969 8.12875 11.1969 8.12875 11.1969C8.12875 11.1969 3.49603 11.1969 2.33844 10.8872C1.69952 10.7147 1.19735 10.2112 1.0276 9.57306C0.71875 8.41487 0.71875 5.99687 0.71875 5.99687C0.71875 5.99687 0.71875 3.57887 1.0276 2.42069C1.1997 1.78015 1.70188 1.27669 2.33844 1.10651C3.49603 0.796875 8.12875 0.796875 8.12875 0.796875C8.12875 0.796875 12.7638 0.796875 13.9191 1.10651ZM10.4981 5.99687L6.6481 8.22578V3.76796L10.4981 5.99687Z"
                                         fill="white" />
                                 </svg>
-        
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
-    <script src="./script/script.js"></script>
 
 </body>
 </html>

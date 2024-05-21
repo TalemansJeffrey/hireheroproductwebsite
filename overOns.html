@@ -7,111 +7,174 @@
         <link rel="stylesheet" href="./css/main.css">
         <title>Hirehero</title>
     </head>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 <body>
     <!--Navbar-->
-    
-    <nav class="bg-lightBlue fixed w-full z-20 top-0 start-0 border-b">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="index.html" class="flex items-center space-x-12 rtl:space-x-reverse">
-            <img src="./img/logoHirehero.svg" class="h-8" alt="Hirehero Logo">
-            <span class="self-center text-2xl font-epilogue font-bold whitespace-nowrap ">Hirehero</span>
-        </a>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            
-    
-            <button data-collapse-toggle="navbar-sticky" type="button" id="hamburger" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-              </svg>
-          </button>
-        </div>
-        <div id="nav" class="items-center justify-between hidden w-full md:hidden lg:flex md:w-auto md:order-1" id="navbar-sticky">
-          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-           
-            <li>
-              <a href="bedrijven.html" class=" font-epilogue block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 xl:text-xl xl:pt-4">Bedrijven</a>
-            </li>
-            <li>
-              <a href="blog.html" class=" font-epilogue block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 xl:text-xl xl:pt-4">Blog</a>
-            </li>
-            <li>
-              <a href="overOns.html" class="font-epilogue block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 xl:text-xl xl:pt-4">Over ons</a>
-            </li>
-            <li class="relative">
-                <button type="button" class="text-purple font-bold font-epilogue bg-white text-base border-purple border-solid border-2 mr-4 px-5 py-1 hover:bg-darkBlue focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-center xl:py-3 xl:px-8 xl:border-4 xl:text-xl"> <a href="">Contact</a></button>
-            </li>
-            <li class="relative sm:mt-4 xl:mt-0" >
-                <button type="button" class="text-white font-bold font-epilogue bg-purple px-5 py-1 text-base hover:bg-darkBlue focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-center xl:py-3 xl:px-8 xl:text-xl xl:mt-2"><a href="">Aanmelden</a></button>
-    
-            </li>
-          </ul>
-        </div>
-        </div>
-      </nav>
-      <main class="pt-16 bg-white/75 pb-16">
-
-        <h1 class="font-bolder text-5xl mx-8 mt-16 text-center ">
-            Over ons
-        </h1>
-
-        <section class="lg:flex lg:flex-row-reverse lg:justify-between lg:mx-16 lg:mt-16">
-            <div class="max-w-full lg:ml-24 md:mt-8 lg:max-w-[435px] mt-8 mb-8">
-                
-                <img src="./img/Afbeelding_van_WhatsApp_op_2023-09-01_om_09.53.20_b727e7c0.jpg" alt="">
-
-            </div>
-            <div>
-            <div>
-            <h2 class="font-bolder font-epilogue text-4xl mx-8 lg:max-w-[562px]">Jaro Brichau</h2>
-            <p class="font-epilogue text-base mt-8 mx-8 lg:max-w-[518px]">Jaro is een Digital Experience Design student met een passie voor design en frontend ontwikkeling, vooral met Tailwind CSS. Hij streeft naar aantrekkelijke en gebruiksvriendelijke digitale ervaringen en werkt aan het verfijnen van zijn frontend vaardigheden. Hij is een echte creatieve duizendpoot.
-                <br>
-                
-                <div class="grid grid-cols-2 space-x-4 gap-4 font-epilogue font-base mx-4 text-center mt-8 md:grid-cols-3 lg:grid-cols-4">
-                    <p class="bg-orange inline-block px-4 ml-4 py-2 rounded-xl">He/him</p>
-                    <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Design lead</p>
-                    <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Tailwind css</p>
-                    <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">XD student</p>
-                    <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Lopen</p>
-                    <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Fietsen</p>
-                    <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Woody 🐶</p>
-                    <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Wielrennen</p>
-        </div>
-      
-
-        <a href="" class="max-w-24 mt-8"><img class="max-w-full ml-8 mt-8" src="./img/linkedinsvg.svg" alt="LinkedIn icon"></a>
-    </div>
-        </section>
-        <section class="lg:flex lg:flex-row lg:justify-between lg:mx-16 lg:mt-16">
-            <div class="max-w-full lg:ml-24 md:mt-8 lg:max-w-[435px] mt-8 mb-8">
-                <img src="./img/387488766_306435278763488_6691726969833089996_n.jpg" alt="">
-            </div>
-            <div class="w-full">
-                <div>
-                    <h2 class="font-bolder font-epilogue text-4xl mx-8 lg:max-w-[562px]">Jeffrey Talemans</h2>
-                    <p class="font-epilogue text-base mt-8 mx-8 lg:max-w-[518px]">Student Digital Experience Design. Hij neemt het achterliggende gedeelte (backend) van het platform op zich. Jeffrey is een enorme muziek fan. Zingt graag (ookal is het soms een beetje vals). Lead zanger van “Wraiths of Midnight”. Is gek op tennis, en andere racketsporten.
-                        <br>
-                        Zijn favoriete artiest(en) : Nightwish, Epica, Christina Aguilera
-                        <br>
-                        Favoriet liedje : Elan, Tides of time, Reflection </p>
+    <!-- Navbar Section -->
+    <section>
+        <div class="h-auto w-screen bg-[#C4E4F7] text-black fixed z-50">
+            <!-- NAVBAR -->
+            <nav class="font-epilogue mx-auto h-auto w-full max-w-[1600px] lg:relative lg:top-0">
+                <!-- CONTAINER -->
+                <div class="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4 xl:px-20">
+                    <!-- SVG LOGO -->
+                    <a href="index.html">
+                        <img src="img/logoHirehero.svg" alt="Logo Hirehero" class="inline-block h-10" />
+                    </a>
+                    
+                    <!-- MENU CONTENT 1 -->
+                    <div class="mt-14 flex flex-col space-y-8 lg:mt-0 lg:flex lg:flex-row lg:space-x-1 lg:space-y-0 hidden" id="menuContent">
+                        <a href="index.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Home</a>
+                        <a href="studenten.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Studenten</a>
+                        <a href="bedrijven.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Bedrijven</a>
+                        <a href="blog.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Blog</a>
+                        <a href="overOns.html" class="font-epilogue nav-link active-link rounded-lg lg:px-6 lg:py-4">Over ons</a>
+                        <a href="pricing.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Pricing</a>
+                    </div>
+                    <!-- MENU CONTENT 2 -->
+                    <div class="flex flex-col space-y-8 lg:flex lg:flex-row lg:space-x-3 lg:space-y-0 hidden" id="menuContent2">
+                        <a href="aanmelden.html" target="_blank" style="background-color: #FFDAB9;" class="inline-block rounded-full px-5 py-3 text-center font-bold text-black transition hover:border-black hover:bg-[#9080FC]">Aanmelden</a>
+                        <a href="registreren.html" target="_blank" style="background-color: #FFDAB9;" class="inline-block rounded-full px-5 py-3 text-center font-bold text-black transition hover:border-black hover:bg-[#9080FC]">Registreren</a>
+                    </div>
+                    <!-- BURGER MENU -->
+                    <a href="#" class="absolute right-5 lg:hidden p-2" onclick="toggleMenu(event)">
+                        <svg width="2rem" height="2rem" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19 7H1C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9H19C19.5523 9 20 8.55228 20 8C20 7.44772 19.5523 7 19 7Z" fill="currentColor"></path>
+                            <path d="M19 0H7C6.44772 0 6 0.447715 6 1C6 1.55228 6.44772 2 7 2H19C19.5523 2 20 1.55228 20 1C20 0.447715 19.5523 0 19 0Z" fill="currentColor"></path>
+                            <path d="M19 14H11C10.4477 14 10 14.4477 10 15C10 15.5523 10.4477 16 11 16H19C19.5523 16 20 15.5523 20 15C20 14.4477 19.5523 14 19 14Z" fill="currentColor"></path>
+                        </svg>
+                    </a>
                 </div>
-        
-        <div class="grid grid-cols-2 space-x-4 gap-4 font-epilogue font-base mx-8 text-center mt-8 md:grid-cols-3 lg:grid-cols-4">
-            <p class="bg-orange inline-block px-4 ml-4 py-2 rounded-xl">He/him</p>
-            <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Backend lead</p>
-            <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Zingen</p>
-            <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">XD student</p>
-            <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Tennis</p>
-            <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Epica</p>
-            <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Nightwish</p>
-            <p class="bg-darkBlue inline-block px-4 py-2 rounded-xl">Tides of time</p>
-
+            </nav>
         </div>
-        <a href="" class="max-w-24 mt-8"><img class="max-w-full ml-12 mt-8" src="./img/linkedinsvg.svg" alt=""></a>
-            </div>
-        </section>
+    </section>
+    
+    <style>
+    .nav-link {
+        position: relative;
+        padding-bottom: 5px;
+        color: black;
+        transition: color 0.25s ease-out;
+    }
+    
+    .nav-link:hover {
+        color: #9080FC;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #9080FC;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+    
+    .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    
+    .active-link {
+        color: #9080FC;
+    }
+    
+    .active-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #9080FC;
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    </style>
+    
+    <script>
+    function toggleMenu(event) {
+        event.preventDefault();
+        const menuContent = document.getElementById('menuContent');
+        const menuContent2 = document.getElementById('menuContent2');
+        menuContent.classList.toggle('hidden');
+        menuContent2.classList.toggle('hidden');
+    }
+    </script>
 
-      </main>
+    <section class="overflow-hidden px-4 py-12 md:py-18 bg-white/75">
+        <div class="container mx-auto px-4 lg:px-32 space-y-24 md:space-y-36">
+            <h1 class="font-bolder text-5xl mt-16 text-left lg:mx-0">Over ons</h1>
+            <div class="flex flex-col items-center justify-between gap-6 lg:flex-row">
+                <div class="max-w-md space-y-6 lg:text-left">
+                    <span class="inline-flex items-center rounded-full bg-[#FFDAB9] px-2 py-1 text-sm font-semibold shadow-sm" style="color: #9080FC;">
+                        <!-- Heroicon name: outline/tag -->
+                        <svg fill="none" stroke="#9080FC" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                        </svg>
+                        Jaro Brichau
+                    </span>
+                    <h3 class="text-3xl font-semibold text-heading lg:text-4xl">
+                        Jaro Brichau
+                    </h3>
+                    <p class="text-base font-epilogue">
+                        Jaro is een Digital Experience Design student met een passie voor design en frontend ontwikkeling, vooral met Tailwind CSS. Hij streeft naar aantrekkelijke en gebruiksvriendelijke digitale ervaringen en werkt aan het verfijnen van zijn frontend vaardigheden. Hij is een echte creatieve duizendpoot.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 font-epilogue text-center mt-8 mx-0 md:grid-cols-3 lg:grid-cols-3">
+                        <p class="bg-orange px-4 py-2 rounded-xl">He/him</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Design lead</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Tailwind CSS</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">XD student</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Lopen</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Fietsen</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Woody 🐶</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Wielrennen</p>
+                    </div>
+                    
+                </div>
+                <div class="max-w-lg">
+                    <img src="profjaro.svg" alt="" class="w-full" />
+                </div>
+            </div>
+            <div class="flex flex-col items-center justify-between gap-6 lg:flex-row-reverse">
+                <div class="max-w-md space-y-6 lg:text-left">
+                    <span class="inline-flex items-center rounded-full bg-[#C4E4F7] px-2 py-1 text-sm font-semibold shadow-sm" style="color: #9080FC;">
+                        <!-- Heroicon name: outline/shield-check -->
+                        <svg fill="none" stroke="#9080FC" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="mr-1 h-5 w-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                        Jeffrey Talemans
+                    </span>
+                    <h3 class="text-3xl font-semibold text-heading lg:text-4xl">
+                        Jeffrey Talemans
+                    </h3>
+                    
+                    <p class="text-base font-epilogue">
+                        Student Digital Experience Design. Hij neemt het achterliggende gedeelte (backend) van het platform op zich. Jeffrey is een enorme muziek fan. Zingt graag (ookal is het soms een beetje vals). Lead zanger van “Wraiths of Midnight”. Is gek op tennis, en andere racketsporten. Zijn favoriete artiest(en): Nightwish, Epica, Christina Aguilera. Favoriet liedje: Elan, Tides of time, Reflection.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 font-epilogue text-center mt-8 md:grid-cols-3 lg:grid-cols-3">
+                        <p class="bg-orange px-4 py-2 rounded-xl">He/him</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Backend lead</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Zingen</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">XD student</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Tennis</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Epica</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Nightwish</p>
+                        <p class="bg-darkBlue px-4 py-2 rounded-xl">Tides of time</p>
+                    </div>
+                    <a href="" class="mt-8 block"><img class="ml-8" src="./img/linkedinsvg.svg" alt="LinkedIn icon"></a>
+                </div>
+                
+                <div class="max-w-lg">
+                    <img src="Jeffreyfoto.svg" alt="" class="w-full" />
+                </div>
+            </div>
+      </section>
+
       <footer class="bg-orange font-epilogue dark:bg-gray-900">
         <section class="py-20 ">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -137,7 +200,7 @@
                         <a href="javascript:;" class="cursor-pointer flex justify-center lg:justify-start">
                            
                         <p class="py-8 text-sm text-gray-500 lg:max-w-xs text-center lg:text-left">Heb je een specifieke vraag, of wil je toch even bijbabbelen? Wij staan altijd klaar voor jou</p>
-                        <a href="javascript:;"
+                        <a href="contact.html"
                             class="py-2.5 cursor-pointer px-5 h-9 block w-fit bg-[#97CAF9] rounded-full shadow-sm text-xs text-white mx-auto transition-all  duration-500 hover:bg-[#9080FC] lg:mx-0">
                             Contacteer ons
                         </a>
@@ -150,13 +213,13 @@
                                 <a href="javascript:;" class="cursor-pointer text-gray-600 hover:text-gray-900">Bedrijven</a>
                             </li>
                             <li class="mb-6">
-                                <a href="javascript:;" class="cursor-pointer text-gray-600 hover:text-gray-900">Studenten</a>
+                                <a href="studenten.html" class="cursor-pointer text-gray-600 hover:text-gray-900">Studenten</a>
                             </li>
                             <li class="mb-6">
                                 <a href="blog.html" class="cursor-pointer  text-gray-600 hover:text-gray-900">Blog</a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="cursor-pointer  text-gray-600 hover:text-gray-900">Hoe werkt het?</a>
+                                <a href="bedrijven.html" class="cursor-pointer  text-gray-600 hover:text-gray-900">Hoe werkt het?</a>
                             </li>
                             
                         </ul>
@@ -181,14 +244,14 @@
                     </div>
                     <!--End Col-->
                     <div class="lg:mx-auto">
-                        <h4 class="text-lg text-gray-900 font-medium mb-7">About</h4>
+                        <h4 class="text-lg text-gray-900 font-medium mb-7">Over</h4>
                         <ul class="text-sm  transition-all duration-500">
                             <li class="mb-6">
-                                <a href="javascript:;" class="cursor-pointer text-gray-600 hover:text-gray-900">Over ons
+                                <a href="overOns.html" class="cursor-pointer text-gray-600 hover:text-gray-900">Over ons
                                 </a>
                             </li>
                             <li class="mb-6">
-                                <a href="javascript:;" class="cursor-pointer  text-gray-600 hover:text-gray-900">Contact</a>
+                                <a href="contact.html" class="cursor-pointer  text-gray-600 hover:text-gray-900">Contact</a>
                             </li>
                             
                         </ul>
