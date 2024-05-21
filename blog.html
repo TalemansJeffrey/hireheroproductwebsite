@@ -21,139 +21,195 @@
         <link rel="stylesheet" href="./css/main.css">
     </head>
 <body>
-    <!--Navbar-->
-    
-    <nav class="bg-lightBlue fixed w-full z-20 top-0 start-0 border-b">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="index.html" class="flex items-center space-x-12 rtl:space-x-reverse">
-            <img src="./img/logoHirehero.svg" class="h-8" alt="Hirehero Logo">
-            <span class="self-center text-2xl font-epilogue font-bold whitespace-nowrap ">Hirehero</span>
-        </a>
-        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            
-    
-            <button data-collapse-toggle="navbar-sticky" type="button" id="hamburger" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
-              <span class="sr-only">Open main menu</span>
-              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-              </svg>
-          </button>
-        </div>
-        <div id="nav" class="items-center justify-between hidden w-full md:hidden lg:flex md:w-auto md:order-1" id="navbar-sticky">
-          <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-           
-            <li>
-              <a href="bedrijven.html" class=" font-epilogue block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 xl:text-xl xl:pt-4">Bedrijven</a>
-            </li>
-            <li>
-              <a href="blog.html" class=" font-epilogue block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 xl:text-xl xl:pt-4">Blog</a>
-            </li>
-            <li>
-              <a href="overOns.html" class="font-epilogue block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 xl:text-xl xl:pt-4">Over ons</a>
-            </li>
-            <li class="relative">
-                <button type="button" class="text-purple font-bold font-epilogue bg-white text-base border-purple border-solid border-2 mr-4 px-5 py-1 hover:bg-darkBlue focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-center xl:py-3 xl:px-8 xl:border-4 xl:text-xl"> <a href="">Contact</a></button>
-            </li>
-            <li class="relative sm:mt-4 xl:mt-0" >
-                <button type="button" class="text-white font-bold font-epilogue bg-purple px-5 py-1 text-base hover:bg-darkBlue focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-xl text-center xl:py-3 xl:px-8 xl:text-xl xl:mt-2"><a href="">Aanmelden</a></button>
-    
-            </li>
-          </ul>
-        </div>
-        </div>
+<!--Navbar-->
+<section>
+  <div class="h-auto w-screen bg-[#C4E4F7] text-black fixed z-50">
+      <!-- NAVBAR -->
+      <nav class="font-epilogue mx-auto h-auto w-full max-w-[1600px] lg:relative lg:top-0 ">
+          <!-- CONTAINER -->
+          <div class="flex flex-col px-6 py-6 lg:flex-row lg:items-center lg:justify-between lg:px-10 lg:py-4 xl:px-20">
+              <!-- SVG LOGO -->
+              <a href="index.html">
+                  <img src="img/logoHirehero.svg" alt="Logo Hirehero" class="inline-block h-10" />
+              </a>
+              
+              <!-- MENU CONTENT 1 -->
+              <div class="mt-14 flex flex-col space-y-8 lg:mt-0 lg:flex lg:flex-row lg:space-x-1 lg:space-y-0 hidden" id="menuContent">
+                  <a href="index.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Home</a>
+                  <a href="studenten.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Studenten</a>
+                  <a href="bedrijven.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Bedrijven</a>
+                  <a href="blog.html" class="font-epilogue nav-link active-link rounded-lg lg:px-6 lg:py-4">Blog</a>
+                  <a href="overOns.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Over ons</a>
+                  <a href="pricing.html" class="font-epilogue nav-link rounded-lg lg:px-6 lg:py-4">Pricing</a>
+              </div>
+              <!-- MENU CONTENT 2 -->
+              <div class="flex flex-col space-y-8 lg:flex lg:flex-row lg:space-x-3 lg:space-y-0 hidden" id="menuContent2">
+                  <a href="aanmelden.html" target="_blank" style="background-color: #FFDAB9;" class="inline-block rounded-full px-5 py-3 text-center font-bold text-black transition hover:border-black hover:bg-[#9080FC]">Aanmelden</a>
+                  <a href="registreren.html" target="_blank" style="background-color: #FFDAB9;" class="inline-block rounded-full px-5 py-3 text-center font-bold text-black transition hover:border-black hover:bg-[#9080FC]">Registreren</a>
+              </div>
+              <!-- BURGER MENU -->
+              <a href="#" class="absolute right-5 lg:hidden p-2" onclick="toggleMenu(event)">
+                <svg width="2rem" height="2rem" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 7H1C0.447715 7 0 7.44772 0 8C0 8.55228 0.447715 9 1 9H19C19.5523 9 20 8.55228 20 8C20 7.44772 19.5523 7 19 7Z" fill="currentColor"></path>
+                    <path d="M19 0H7C6.44772 0 6 0.447715 6 1C6 1.55228 6.44772 2 7 2H19C19.5523 2 20 1.55228 20 1C20 0.447715 19.5523 0 19 0Z" fill="currentColor"></path>
+                    <path d="M19 14H11C10.4477 14 10 14.4477 10 15C10 15.5523 10.4477 16 11 16H19C19.5523 16 20 15.5523 20 15C20 14.4477 19.5523 14 19 14Z" fill="currentColor"></path>
+                </svg>
+              </a>
+
+          </div>
       </nav>
-      <main class="pt-16 bg-white/75">
-
-
-        
-<!-- Card Blog -->
-<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-  <!-- Title -->
-  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
-    <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">The Blog</h2>
-    <p class="mt-1 text-gray-600 dark:text-gray-400">See how game-changing companies are making the most of every engagement with Preline.</p>
   </div>
-  <!-- End Title -->
+</section>
 
-  <!-- Grid -->
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Card -->
-    <a class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-      <div class="aspect-w-16 aspect-h-11">
-        <img class="w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
-      </div>
-      <div class="my-6">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
-          Announcing a free plan for small teams
-        </h3>
-        <p class="mt-5 text-gray-600 dark:text-gray-400">
-          At Wake, our mission has always been focused on bringing openness.
-        </p>
-      </div>
-      <div class="mt-auto flex items-center gap-x-3">
-        <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
-        <div>
-          <h5 class="text-sm text-gray-800 dark:text-gray-200">By Lauren Waller</h5>
-        </div>
-      </div>
-    </a>
-    <!-- End Card -->
+<style>
+.nav-link {
+  position: relative;
+  padding-bottom: 5px;
+  color: black;
+  transition: color 0.25s ease-out;
+}
 
-    <!-- Card -->
-    <a class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-      <div class="aspect-w-16 aspect-h-11">
-        <img class="w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1562851529-c370841f6536?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3540&q=80" alt="Image Description">
-      </div>
-      <div class="my-6">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
-          How Google Assistant now helps you record stories for kids
-        </h3>
-        <p class="mt-5 text-gray-600 dark:text-gray-400">
-          Google is constantly updating its consumer AI, Google Assistant, with new features.
-        </p>
-      </div>
-      <div class="mt-auto flex items-center gap-x-3">
-        <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
-        <div>
-          <h5 class="text-sm text-gray-800 dark:text-gray-200">By Aaron Larsson</h5>
-        </div>
-      </div>
-    </a>
-    <!-- End Card -->
+.nav-link:hover {
+  color: #9080FC;
+}
 
-    <!-- Card -->
-    <a class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-      <div class="aspect-w-16 aspect-h-11">
-        <img class="w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1521321205814-9d673c65c167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3548&q=80" alt="Image Description">
-      </div>
-      <div class="my-6">
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
-          Front accounts - let's work together
-        </h3>
-        <p class="mt-5 text-gray-600 dark:text-gray-400">
-          Are you an accountant? Are you a company formation advisor?
-        </p>
-      </div>
-      <div class="mt-auto flex items-center gap-x-3">
-        <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
-        <div>
-          <h5 class="text-sm text-gray-800 dark:text-gray-200">By Lauren Waller</h5>
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9080FC;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.active-link {
+  color: #9080FC;
+}
+
+.active-link::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #9080FC;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+</style>
+
+<script>
+function toggleMenu(event) {
+  event.preventDefault();
+  const menuContent = document.getElementById('menuContent');
+  const menuContent2 = document.getElementById('menuContent2');
+  menuContent.classList.toggle('hidden');
+  menuContent2.classList.toggle('hidden');
+}
+</script>
+
+<main class="pt-16 bg-white/75">
+  <!-- Card Blog -->
+  <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <!-- Title -->
+    <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+      <h2 class="text-2xl font-bold md:text-4xl md:leading-tight dark:text-white">The Blog</h2>
+      <p class="mt-1 text-gray-600 dark:text-gray-400">Zie hoe baanbrekende bedrijven het meeste halen uit elke betrokkenheid met Preline.</p>
+    </div>
+    <!-- End Title -->
+  
+    <!-- Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card -->
+      <a class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+        <div class="aspect-w-16 aspect-h-11">
+          <img class="w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1633114128174-2f8aa49759b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" alt="Image Description">
         </div>
-      </div>
-    </a>
+        <div class="my-6">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
+            De Toekomst van Stagematching: Innovatie en Efficiëntie
+          </h3>
+          <p class="mt-5 text-gray-600 dark:text-gray-400">
+            Bij Hirehero streven we ernaar om de toekomst van stages te transformeren met behulp van baanbrekende technologie. Ons platform biedt een naadloze overgang van de academische wereld naar de professionele sfeer, door studenten en bedrijven op een hyper-efficiënte manier met elkaar te verbinden.
+          </p>
+        </div>
+        <div class="mt-auto flex items-center gap-x-3">
+          <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
+          <div>
+            <h5 class="text-sm text-gray-800 dark:text-gray-200">Door Jeffrey Talemans</h5>
+          </div>
+        </div>
+      </a>
+      <!-- End Card -->
+  
+      <!-- Card -->
+      <a class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+        <div class="aspect-w-16 aspect-h-11">
+          <img class="w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1562851529-c370841f6536?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=3540&q=80" alt="Image Description">
+        </div>
+        <div class="my-6">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
+            Hoe Hirehero Discriminatie op de Stagemarkt Aanpakt
+          </h3>
+          <p class="mt-5 text-gray-600 dark:text-gray-400">
+            Ons platform zet zich in voor inclusiviteit en gelijkheid. We verminderen discriminatie op basis van afkomst door een rechtvaardige selectieprocedure te implementeren, gekoppeld aan SDG 10, waardoor we bijdragen aan een inclusievere arbeidsmarkt voor studenten van diverse achtergronden.
+          </p>
+        </div>
+        <div class="mt-auto flex items-center gap-x-3">
+          <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
+          <div>
+            <h5 class="text-sm text-gray-800 dark:text-gray-200">Door Jaro Brichau</h5>
+          </div>
+        </div>
+      </a>
+      <!-- End Card -->
+  
+      <!-- Card -->
+      <a class="group flex flex-col h-full border border-gray-200 hover:border-transparent hover:shadow-lg transition-all duration-300 rounded-xl p-5 dark:border-gray-700 dark:hover:border-transparent dark:hover:shadow-black/[.4] dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+        <div class="aspect-w-16 aspect-h-11">
+          <img class="w-full object-cover rounded-xl" src="https://images.unsplash.com/photo-1521321205814-9d673c65c167?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=crop&w=3548&q=80" alt="Image Description">
+        </div>
+        <div class="my-6">
+          <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-300 dark:group-hover:text-white">
+            Efficiëntere Vacatureplaatsing voor Werkgevers
+          </h3>
+          <p class="mt-5 text-gray-600 dark:text-gray-400">
+            Het plaatsen van stagevacatures kan tijdrovend zijn. Hirehero lost dit probleem op door een efficiënte oplossing te bieden waarbij werkgevers niet langer op meerdere platforms dezelfde informatie hoeven in te voeren. Dit draagt bij aan SDG 9: Innovatie en Infrastructuur.
+          </p>
+        </div>
+        <div class="mt-auto flex items-center gap-x-3">
+          <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8MHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80" alt="Image Description">
+          <div>
+            <h5 class="text-sm text-gray-800 dark:text-gray-200">Door Jeffrey Talemans</h5>
+          </div>
+        </div>
+      </a>
+      <!-- End Card -->
+    </div>
+    <!-- End Grid -->
+  
+    <!-- Card -->
+    <div class="mt-12 text-center">
+      <a class="py-3 px-4 inline-flex items-center gap-x-1 text-sm font-medium rounded-full border border-gray-200 bg-white text-blue-600 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-blue-500 dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+        Lees meer
+        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </a>
+    </div>
     <!-- End Card -->
   </div>
-  <!-- End Grid -->
-
-  <!-- Card -->
-  <div class="mt-12 text-center">
-    <a class="py-3 px-4 inline-flex items-center gap-x-1 text-sm font-medium rounded-full border border-gray-200 bg-white text-blue-600 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-blue-500 dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-      Read more
-      <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-    </a>
-  </div>
-  <!-- End Card -->
-
+  <!-- End Card Blog -->
+  </main>
+  
 
 
 
